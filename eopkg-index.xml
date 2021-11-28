@@ -966,6 +966,251 @@ Signed-off-by: Peter O&apos;Connor &lt;peter@solus-project.com&gt;</Comment>
         </Source>
     </Package>
     <Package>
+        <Name>xdg-desktop-portal-devel</Name>
+        <Summary xml:lang="en">Development files for xdg-desktop-portal</Summary>
+        <Description xml:lang="en">A portal frontend service for Flatpak and possibly other desktop containment frameworks. xdg-desktop-portal works by exposing a series of D-Bus interfaces known as portals under a well-known name (org.freedesktop.portal.Desktop) and object path (/org/freedesktop/portal/desktop). The portal interfaces include APIs for file access, opening URIs, printing and others.</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>LGPL-2.1-or-later</License>
+        <RuntimeDependencies>
+            <Dependency release="15">xdg-desktop-portal</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <PkgConfig>xdg-desktop-portal</PkgConfig>
+        </Provides>
+        <History>
+            <Update release="15">
+                <Date>2021-09-20</Date>
+                <Version>1.10.1</Version>
+                <Comment>Update to 1.10.1
+
+**Changelog**
+- Reverts a breaking change to the screencast and inhibit portal</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="14">
+                <Date>2021-09-18</Date>
+                <Version>1.10.0</Version>
+                <Comment>Update to 1.10.0
+
+**Changelog:**
+
+- Add power profile monitor implementation
+- Remap /run/flatpak/app, for Flatpak 1.11.x
+- Remap /var/config and /var/data
+- location: Fix accuracy levels
+- openuri: Use real path for OpenDirectory
+- permission-store: Avoid a crash
+- permissions-store: Add GetPermission
+- screencast: Add &apos;virtual&apos; source type</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="13">
+                <Date>2021-06-22</Date>
+                <Version>1.8.1</Version>
+                <Comment>Add Settings implementation list patch.</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="12">
+                <Date>2021-06-20</Date>
+                <Version>1.8.1</Version>
+                <Comment>Rebuild against toolchain</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2021-04-27</Date>
+                <Version>1.8.1</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="10">
+                <Date>2021-04-12</Date>
+                <Version>1.8.1</Version>
+                <Comment>Update to 1.8.1
+
+**Summarized Changelog:**
+
+- documents: Add snap support
+- filechooser: Fix directory support
+- openuri: Fix an fd leak
+- snap: Use cgroups to identify confined apps
+- wallpaper: Fix a crash</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="9">
+                <Date>2020-11-07</Date>
+                <Version>1.8.0</Version>
+                <Comment>Update to 1.8.0
+
+**Changelog:**
+
+- camera: Don&apos;t leak pipewire proxy
+- camera: Make the client node visible
+- filechooser: Return the current filter
+- openuri: Allow skipping the chooser for more URL tyles
+- openuri: Robustness fixes</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="8">
+                <Date>2020-03-16</Date>
+                <Version>1.7.0</Version>
+                <Comment>Update to 1.7.0 for pipewire support.</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="7">
+                <Date>2018-10-11</Date>
+                <Version>1.0.3</Version>
+                <Comment>Update xdg-desktop-portal to 1.0.3
+
+Summary:
+- Fix an option name in the remote desktop portal
+- document-portal: Validate permissions and report errors
+- Fix life-cycle issues with inodes in the document portal
+- Improve the test coverage of the documents portal
+- Add a &apos;coverage&apos; make target
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan: Successfully build `xdg-desktop-portal-gtk` against this package
+
+Reviewers: #triage_team, sunnyflunk
+
+Reviewed By: #triage_team, sunnyflunk
+
+Differential Revision: https://dev.getsol.us/D3994</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="6">
+                <Date>2018-09-13</Date>
+                <Version>1.0.2</Version>
+                <Comment>Update xdg-desktop-portal to 1.0.2
+
+Summary:
+- networkmonitor: Fix several issues
+- inhibit: Add session state monitoring
+
+Depends on D3838
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan: Successfully build xdg-desktop-portal-gtk 1.0.2 against this package
+
+Reviewers: #triage_team, JoshStrobl
+
+Reviewed By: #triage_team, JoshStrobl
+
+Differential Revision: https://dev.getsol.us/D3839</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>187</InstalledSize>
+        <PackageSize>2530</PackageSize>
+        <PackageHash>885e2edd6e5bd6985f03db6ba12fe0c45675bd0d</PackageHash>
+        <PackageURI>xdg-desktop-portal-devel-1.10.1-15-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>xdg-desktop-portal</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>slurp</Name>
+        <Summary xml:lang="en">select a region in a wayland compositor</Summary>
+        <Description xml:lang="en">select a region in a waylan compositor</Description>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="24">wayland</Dependency>
+            <Dependency releaseFrom="68">glibc</Dependency>
+            <Dependency releaseFrom="12">libxkbcommon</Dependency>
+            <Dependency releaseFrom="48">libcairo</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-11-26</Date>
+                <Version>1.3.2</Version>
+                <Comment>Packaging update</Comment>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>35216</InstalledSize>
+        <PackageSize>11950</PackageSize>
+        <PackageHash>ca31ce4c23c04bdd799c9541645b625d41ef979e</PackageHash>
+        <PackageURI>slurp-1.3.2-1-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>slurp</Name>
+            <Packager>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>nnn-nerd</Name>
+        <Summary xml:lang="en">A simple console file manager forked from Noice.</Summary>
+        <Description xml:lang="en">A simple console file manager forked from Noice.</Description>
+        <PartOf>system.utils</PartOf>
+        <License>BSD-2-Clause</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="15">ncurses</Dependency>
+            <Dependency releaseFrom="68">glibc</Dependency>
+            <Dependency releaseFrom="8">readline</Dependency>
+            <Dependency>atool</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>mediainfo</Dependency>
+            <Dependency>moreutils</Dependency>
+            <Dependency>rclone</Dependency>
+            <Dependency>sshfs-fuse</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="24">
+                <Date>2021-11-28</Date>
+                <Version>4.4</Version>
+                <Comment>Packaging update</Comment>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>143476</InstalledSize>
+        <PackageSize>63350</PackageSize>
+        <PackageHash>541f7dd11582de40969b4ff75955704f9b3931a0</PackageHash>
+        <PackageURI>nnn-nerd-4.4-24-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>nnn-nerd</Name>
+            <Packager>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>libxdmcp-32bit</Name>
         <Summary xml:lang="en">32-bit libraries for libxdmcp</Summary>
         <Description xml:lang="en">X Display Manager Control Protocol library</Description>
@@ -1069,87 +1314,6 @@ Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
             <Packager>
                 <Name>Joey Riches</Name>
                 <Email>josephriches@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>slurp</Name>
-        <Summary xml:lang="en">select a region in a wayland compositor</Summary>
-        <Description xml:lang="en">select a region in a waylan compositor</Description>
-        <PartOf>multimedia.graphics</PartOf>
-        <License>MIT</License>
-        <RuntimeDependencies>
-            <Dependency releaseFrom="24">wayland</Dependency>
-            <Dependency releaseFrom="68">glibc</Dependency>
-            <Dependency releaseFrom="12">libxkbcommon</Dependency>
-            <Dependency releaseFrom="48">libcairo</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="1">
-                <Date>2021-11-26</Date>
-                <Version>1.3.2</Version>
-                <Comment>Packaging update</Comment>
-                <Name>Matt Kastelic</Name>
-                <Email>edenfall_matt@hotmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>solus</BuildHost>
-        <Distribution>Solus</Distribution>
-        <DistributionRelease>1</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>35216</InstalledSize>
-        <PackageSize>11950</PackageSize>
-        <PackageHash>ca31ce4c23c04bdd799c9541645b625d41ef979e</PackageHash>
-        <PackageURI>slurp-1.3.2-1-1-x86_64.eopkg</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>slurp</Name>
-            <Packager>
-                <Name>Matt Kastelic</Name>
-                <Email>edenfall_matt@hotmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>nnn-nerd</Name>
-        <Summary xml:lang="en">A simple console file manager forked from Noice.</Summary>
-        <Description xml:lang="en">A simple console file manager forked from Noice.</Description>
-        <PartOf>system.utils</PartOf>
-        <License>BSD-2-Clause</License>
-        <RuntimeDependencies>
-            <Dependency releaseFrom="15">ncurses</Dependency>
-            <Dependency releaseFrom="68">glibc</Dependency>
-            <Dependency releaseFrom="8">readline</Dependency>
-            <Dependency>atool</Dependency>
-            <Dependency>libarchive</Dependency>
-            <Dependency>mediainfo</Dependency>
-            <Dependency>moreutils</Dependency>
-            <Dependency>rclone</Dependency>
-            <Dependency>sshfs-fuse</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="24">
-                <Date>2021-11-28</Date>
-                <Version>4.4</Version>
-                <Comment>Packaging update</Comment>
-                <Name>Matt Kastelic</Name>
-                <Email>edenfall_matt@hotmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>solus</BuildHost>
-        <Distribution>Solus</Distribution>
-        <DistributionRelease>1</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>143476</InstalledSize>
-        <PackageSize>63350</PackageSize>
-        <PackageHash>541f7dd11582de40969b4ff75955704f9b3931a0</PackageHash>
-        <PackageURI>nnn-nerd-4.4-24-1-x86_64.eopkg</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>nnn-nerd</Name>
-            <Packager>
-                <Name>Matt Kastelic</Name>
-                <Email>edenfall_matt@hotmail.com</Email>
             </Packager>
         </Source>
     </Package>
@@ -1265,6 +1429,171 @@ Differential Revision: https://dev.getsol.us/D4060</Comment>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>libxcb</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>xdg-desktop-portal</Name>
+        <Summary xml:lang="en">Desktop integration portal</Summary>
+        <Description xml:lang="en">A portal frontend service for Flatpak and possibly other desktop containment frameworks. xdg-desktop-portal works by exposing a series of D-Bus interfaces known as portals under a well-known name (org.freedesktop.portal.Desktop) and object path (/org/freedesktop/portal/desktop). The portal interfaces include APIs for file access, opening URIs, printing and others.</Description>
+        <PartOf>desktop.util</PartOf>
+        <License>LGPL-2.1-or-later</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="21">libjson-glib</Dependency>
+            <Dependency releaseFrom="68">glibc</Dependency>
+            <Dependency releaseFrom="78">glib2</Dependency>
+            <Dependency releaseFrom="34">pipewire</Dependency>
+            <Dependency releaseFrom="17">fuse2</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="15">
+                <Date>2021-09-20</Date>
+                <Version>1.10.1</Version>
+                <Comment>Update to 1.10.1
+
+**Changelog**
+- Reverts a breaking change to the screencast and inhibit portal</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="14">
+                <Date>2021-09-18</Date>
+                <Version>1.10.0</Version>
+                <Comment>Update to 1.10.0
+
+**Changelog:**
+
+- Add power profile monitor implementation
+- Remap /run/flatpak/app, for Flatpak 1.11.x
+- Remap /var/config and /var/data
+- location: Fix accuracy levels
+- openuri: Use real path for OpenDirectory
+- permission-store: Avoid a crash
+- permissions-store: Add GetPermission
+- screencast: Add &apos;virtual&apos; source type</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="13">
+                <Date>2021-06-22</Date>
+                <Version>1.8.1</Version>
+                <Comment>Add Settings implementation list patch.</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="12">
+                <Date>2021-06-20</Date>
+                <Version>1.8.1</Version>
+                <Comment>Rebuild against toolchain</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2021-04-27</Date>
+                <Version>1.8.1</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="10">
+                <Date>2021-04-12</Date>
+                <Version>1.8.1</Version>
+                <Comment>Update to 1.8.1
+
+**Summarized Changelog:**
+
+- documents: Add snap support
+- filechooser: Fix directory support
+- openuri: Fix an fd leak
+- snap: Use cgroups to identify confined apps
+- wallpaper: Fix a crash</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="9">
+                <Date>2020-11-07</Date>
+                <Version>1.8.0</Version>
+                <Comment>Update to 1.8.0
+
+**Changelog:**
+
+- camera: Don&apos;t leak pipewire proxy
+- camera: Make the client node visible
+- filechooser: Return the current filter
+- openuri: Allow skipping the chooser for more URL tyles
+- openuri: Robustness fixes</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="8">
+                <Date>2020-03-16</Date>
+                <Version>1.7.0</Version>
+                <Comment>Update to 1.7.0 for pipewire support.</Comment>
+                <Name>Joshua Strobl</Name>
+                <Email>joshua@streambits.io</Email>
+            </Update>
+            <Update release="7">
+                <Date>2018-10-11</Date>
+                <Version>1.0.3</Version>
+                <Comment>Update xdg-desktop-portal to 1.0.3
+
+Summary:
+- Fix an option name in the remote desktop portal
+- document-portal: Validate permissions and report errors
+- Fix life-cycle issues with inodes in the document portal
+- Improve the test coverage of the documents portal
+- Add a &apos;coverage&apos; make target
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan: Successfully build `xdg-desktop-portal-gtk` against this package
+
+Reviewers: #triage_team, sunnyflunk
+
+Reviewed By: #triage_team, sunnyflunk
+
+Differential Revision: https://dev.getsol.us/D3994</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="6">
+                <Date>2018-09-13</Date>
+                <Version>1.0.2</Version>
+                <Comment>Update xdg-desktop-portal to 1.0.2
+
+Summary:
+- networkmonitor: Fix several issues
+- inhibit: Add session state monitoring
+
+Depends on D3838
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan: Successfully build xdg-desktop-portal-gtk 1.0.2 against this package
+
+Reviewers: #triage_team, JoshStrobl
+
+Reviewed By: #triage_team, JoshStrobl
+
+Differential Revision: https://dev.getsol.us/D3839</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>2006380</InstalledSize>
+        <PackageSize>328708</PackageSize>
+        <PackageHash>df2c2300b9a9d22520920c1bab391c40621e80f0</PackageHash>
+        <PackageURI>xdg-desktop-portal-1.10.1-15-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>xdg-desktop-portal</Name>
             <Packager>
                 <Name>Joey Riches</Name>
                 <Email>josephriches@gmail.com</Email>
