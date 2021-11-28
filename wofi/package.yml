@@ -1,0 +1,19 @@
+name       : wofi 
+version    : 1.2.4
+release    : 1
+source     :
+    - https://hg.sr.ht/~scoopta/wofi/archive/v1.2.4.tar.gz : b48da42b9750f149704eb6dbd60ab80b28c5b0d7aaf7e9de75dd9aab585e8e9a
+license    : GPL-3.0
+component  : desktop.wayland
+summary    : Application launcher for wlroots based wayland compositors
+description: |
+    Application launcher for wlroots based wayland compositors
+builddeps  :
+    - pkgconfig(gdk-wayland-3.0)
+    - pkgconfig(wayland-client)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

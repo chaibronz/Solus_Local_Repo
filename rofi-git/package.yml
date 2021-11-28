@@ -1,0 +1,30 @@
+name       : rofi-wayland-git
+version    : 1.7.1
+release    : 1
+source     :
+    - https://github.com/chaibronz/rofi/releases/download/1.7.1/rofi-wayland-git-1.7.1.tar.gz : ceb4f3b1dcb1af1afb52880ac13d62945f40cd37fa55690b53f170c52986fd5d
+license    : MIT
+component  : system.utils
+summary    : A window switcher, run dialog and dmenu replacement with wayland support
+description: |
+    A window switcher, run dialog and dmenu replacement with wayland support
+builddeps  :
+    - pkgconfig(check)
+    - pkgconfig(libstartup-notification-1.0)
+    - pkgconfig(librsvg-2.0)
+    - pkgconfig(libxslt)
+    - pkgconfig(pango)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(wayland-server)
+    - pkgconfig(xcb-cursor)
+    - pkgconfig(xcb-ewmh)
+    - pkgconfig(xcb-xrm)
+    - pkgconfig(xkbcommon)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+check      : |
+    %ninja_check

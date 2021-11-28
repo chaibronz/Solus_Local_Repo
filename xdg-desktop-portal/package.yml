@@ -1,0 +1,27 @@
+name       : xdg-desktop-portal
+version    : 1.10.1
+release    : 15
+source     :
+    - https://github.com/flatpak/xdg-desktop-portal/releases/download/1.10.1/xdg-desktop-portal-1.10.1.tar.xz : ed798de9e7994949f72d8aca69c95fec79446b404395de2dc6c96b7a45c634a5
+license    : LGPL-2.1-or-later
+component  : desktop.util
+summary    : Desktop integration portal
+description: |
+    A portal frontend service for Flatpak and possibly other desktop containment frameworks. xdg-desktop-portal works by exposing a series of D-Bus interfaces known as portals under a well-known name (org.freedesktop.portal.Desktop) and object path (/org/freedesktop/portal/desktop). The portal interfaces include APIs for file access, opening URIs, printing and others.
+builddeps  :
+    - pkgconfig(flatpak)
+    - pkgconfig(fontconfig)
+    - pkgconfig(fuse)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libgeoclue-2.0)
+    - pkgconfig(libpipewire-0.3)
+    - pkgconfig(libportal)
+    - docbook-xml
+    - xmlto
+setup      : |
+    %patch -p1 < $pkgfiles/0001-Patch-for-solus.patch
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
