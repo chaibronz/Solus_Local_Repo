@@ -1,0 +1,1844 @@
+<PISI>
+    <Package>
+        <Name>libxcb-32bit-devel</Name>
+        <Summary xml:lang="en">Development files for 32-bit libxcb</Summary>
+        <Description xml:lang="en">The libxcb package provides an interface to the X Window System protocol, which replaces the current Xlib interface. Xlib can also use XCB as a transport layer, allowing software to make requests and receive responses with both.</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency release="28">libxcb-devel</Dependency>
+            <Dependency releaseFrom="18">libxau-32bit-devel</Dependency>
+            <Dependency release="28">libxcb-32bit</Dependency>
+            <Dependency releaseFrom="17">libxdmcp-32bit-devel</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <PkgConfig32>xcb-xtest</PkgConfig32>
+            <PkgConfig32>xcb</PkgConfig32>
+            <PkgConfig32>xcb-xv</PkgConfig32>
+            <PkgConfig32>xcb-damage</PkgConfig32>
+            <PkgConfig32>xcb-xvmc</PkgConfig32>
+            <PkgConfig32>xcb-xprint</PkgConfig32>
+            <PkgConfig32>xcb-record</PkgConfig32>
+            <PkgConfig32>xcb-randr</PkgConfig32>
+            <PkgConfig32>xcb-dri2</PkgConfig32>
+            <PkgConfig32>xcb-xfixes</PkgConfig32>
+            <PkgConfig32>xcb-xinerama</PkgConfig32>
+            <PkgConfig32>xcb-shm</PkgConfig32>
+            <PkgConfig32>xcb-xf86dri</PkgConfig32>
+            <PkgConfig32>xcb-res</PkgConfig32>
+            <PkgConfig32>xcb-xevie</PkgConfig32>
+            <PkgConfig32>xcb-shape</PkgConfig32>
+            <PkgConfig32>xcb-composite</PkgConfig32>
+            <PkgConfig32>xcb-sync</PkgConfig32>
+            <PkgConfig32>xcb-xkb</PkgConfig32>
+            <PkgConfig32>xcb-present</PkgConfig32>
+            <PkgConfig32>xcb-glx</PkgConfig32>
+            <PkgConfig32>xcb-dri3</PkgConfig32>
+            <PkgConfig32>xcb-xinput</PkgConfig32>
+            <PkgConfig32>xcb-dpms</PkgConfig32>
+            <PkgConfig32>xcb-render</PkgConfig32>
+            <PkgConfig32>xcb-screensaver</PkgConfig32>
+        </Provides>
+        <History>
+            <Update release="28">
+                <Date>2021-11-27</Date>
+                <Version>1.14</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="27">
+                <Date>2020-12-28</Date>
+                <Version>1.14</Version>
+                <Comment>Update libxcb to 1.14
+
+**Changelog:**
+- Add xcb_total_read() and xcb_total_written() API
+- Support check &gt;= 0.13 API (for make check)
+- Bug fix to handle EINTR from recvmsg</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="26">
+                <Date>2020-12-27</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="25">
+                <Date>2020-12-26</Date>
+                <Version>1.13.1</Version>
+                <Comment>drop action.py which is not needed</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="24">
+                <Date>2020-12-25</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild against xcb-proto python3 switch</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="22">
+                <Date>2019-12-05</Date>
+                <Version>1.13.1</Version>
+                <Comment>Saftey rebuild libxcb for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="21">
+                <Date>2018-10-21</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="20">
+                <Date>2018-10-17</Date>
+                <Version>1.13.1</Version>
+                <Comment>Update libxcb to 1.13.1
+
+Summary:
+Don&apos;t flag extra reply in xcb_take_socket
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan: Unit tests are OK
+
+Reviewers: #triage_team, sunnyflunk
+
+Reviewed By: #triage_team, sunnyflunk
+
+Differential Revision: https://dev.getsol.us/D4060</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="19">
+                <Date>2018-10-15</Date>
+                <Version>1.13</Version>
+                <Comment>Rebuild for xorgproto update</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="18">
+                <Date>2018-09-03</Date>
+                <Version>1.13</Version>
+                <Comment>Updated to 1.13</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>6518</InstalledSize>
+        <PackageSize>5293</PackageSize>
+        <PackageHash>9570f0b3599bd38edababc8665538c5eb4b7f059</PackageHash>
+        <PackageURI>libxcb-32bit-devel-1.14-28-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxcb</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxdmcp-32bit-devel</Name>
+        <Summary xml:lang="en">Development files for 32-bit libxdmcp</Summary>
+        <Description xml:lang="en">X Display Manager Control Protocol library</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency release="17">libxdmcp-devel</Dependency>
+            <Dependency releaseFrom="6">xorgproto</Dependency>
+            <Dependency release="17">libxdmcp-32bit</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <PkgConfig32>xdmcp</PkgConfig32>
+        </Provides>
+        <History>
+            <Update release="17">
+                <Date>2021-11-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2020-12-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="15">
+                <Date>2019-12-05</Date>
+                <Version>1.1.3</Version>
+                <Comment>Saftey rebuild libxdmcp for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="14">
+                <Date>2019-06-12</Date>
+                <Version>1.1.3</Version>
+                <Comment>Update to 1.1.3</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="13">
+                <Date>2018-10-21</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2018-10-13</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for xorgproto merge</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2017-12-10</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for hygiene
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2017-11-21</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for new toolchain and flags
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2016-10-12</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="8">
+                <Date>2016-04-17</Date>
+                <Version>1.1.2</Version>
+                <Comment>Cleanup, optimize for speed
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>249</InstalledSize>
+        <PackageSize>1807</PackageSize>
+        <PackageHash>73b652358da4f19547b481b4d63239fc60f8be48</PackageHash>
+        <PackageURI>libxdmcp-32bit-devel-1.1.3-17-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxdmcp</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxdmcp</Name>
+        <Summary xml:lang="en">X Display Manager Control Protocol library</Summary>
+        <Description xml:lang="en">X Display Manager Control Protocol library</Description>
+        <PartOf>xorg.library</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="68">glibc</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="17">
+                <Date>2021-11-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2020-12-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="15">
+                <Date>2019-12-05</Date>
+                <Version>1.1.3</Version>
+                <Comment>Saftey rebuild libxdmcp for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="14">
+                <Date>2019-06-12</Date>
+                <Version>1.1.3</Version>
+                <Comment>Update to 1.1.3</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="13">
+                <Date>2018-10-21</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2018-10-13</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for xorgproto merge</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2017-12-10</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for hygiene
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2017-11-21</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for new toolchain and flags
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2016-10-12</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="8">
+                <Date>2016-04-17</Date>
+                <Version>1.1.2</Version>
+                <Comment>Cleanup, optimize for speed
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>129753</InstalledSize>
+        <PackageSize>26180</PackageSize>
+        <PackageHash>58b40b6648f35764eb40b324f96d16039221b7d5</PackageHash>
+        <PackageURI>libxdmcp-1.1.3-17-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxdmcp</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>rofi-wayland-git</Name>
+        <Summary xml:lang="en">A window switcher, run dialog and dmenu replacement with wayland support</Summary>
+        <Description xml:lang="en">A window switcher, run dialog and dmenu replacement with wayland support</Description>
+        <PartOf>system.utils</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="4">xcb-util-wm</Dependency>
+            <Dependency releaseFrom="48">libcairo</Dependency>
+            <Dependency releaseFrom="68">glibc</Dependency>
+            <Dependency releaseFrom="12">libxkbcommon</Dependency>
+            <Dependency releaseFrom="24">wayland</Dependency>
+            <Dependency releaseFrom="43">gdk-pixbuf</Dependency>
+            <Dependency releaseFrom="28">libxcb</Dependency>
+            <Dependency releaseFrom="8">xcb-util</Dependency>
+            <Dependency releaseFrom="3">xcb-util-cursor</Dependency>
+            <Dependency releaseFrom="46">pango</Dependency>
+            <Dependency releaseFrom="78">glib2</Dependency>
+            <Dependency releaseFrom="6">libstartup-notification</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-11-27</Date>
+                <Version>1.7.1</Version>
+                <Comment>Packaging update</Comment>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>990294</InstalledSize>
+        <PackageSize>530192</PackageSize>
+        <PackageHash>8473423dc215f496d5ee107d644840e0c633fdbc</PackageHash>
+        <PackageURI>rofi-wayland-git-1.7.1-1-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>rofi-wayland-git</Name>
+            <Packager>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxau-32bit</Name>
+        <Summary xml:lang="en">32-bit libraries for libxau</Summary>
+        <Description xml:lang="en">The libXau package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display.</Description>
+        <PartOf>emul32</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency release="18">libxau</Dependency>
+            <Dependency releaseFrom="68">glibc-32bit</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="18">
+                <Date>2021-11-27</Date>
+                <Version>1.0.9</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="17">
+                <Date>2021-06-20</Date>
+                <Version>1.0.9</Version>
+                <Comment>Rebuild against toolchain</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2020-12-27</Date>
+                <Version>1.0.9</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="15">
+                <Date>2019-12-05</Date>
+                <Version>1.0.9</Version>
+                <Comment>Saftey rebuild libxau for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="14">
+                <Date>2019-02-16</Date>
+                <Version>1.0.9</Version>
+                <Comment>Update libxau to 1.0.9
+
+Summary:
+Changelog available [here](https://gitlab.freedesktop.org/xorg/lib/libxau/compare/libXau-1.0.8...libXau-1.0.9)
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan:
+- Unit tests enabled
+- Install and reboot -&gt; ok
+
+Reviewers: #triage_team, DataDrake
+
+Reviewed By: #triage_team, DataDrake
+
+Subscribers: DataDrake
+
+Differential Revision: https://dev.getsol.us/D5350</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="13">
+                <Date>2018-10-21</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2018-10-13</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for xorgproto merge</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2017-12-10</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for hygiene
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2017-11-21</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for new toolchain and flags
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2016-12-16</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for toolchain
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>17699</InstalledSize>
+        <PackageSize>6330</PackageSize>
+        <PackageHash>a033d0842b59b814168496d15fb375aed0b62b3e</PackageHash>
+        <PackageURI>libxau-32bit-1.0.9-18-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxau</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>rofi-wayland</Name>
+        <Summary xml:lang="en">A window switcher, run dialog and dmenu replacement with wayland support</Summary>
+        <Description xml:lang="en">A window switcher, run dialog and dmenu replacement with wayland support</Description>
+        <PartOf>system.utils</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="4">xcb-util-wm</Dependency>
+            <Dependency releaseFrom="48">libcairo</Dependency>
+            <Dependency releaseFrom="67">glibc</Dependency>
+            <Dependency releaseFrom="11">libxkbcommon</Dependency>
+            <Dependency releaseFrom="24">wayland</Dependency>
+            <Dependency releaseFrom="43">gdk-pixbuf</Dependency>
+            <Dependency releaseFrom="27">libxcb</Dependency>
+            <Dependency releaseFrom="8">xcb-util</Dependency>
+            <Dependency releaseFrom="3">xcb-util-cursor</Dependency>
+            <Dependency releaseFrom="45">pango</Dependency>
+            <Dependency releaseFrom="78">glib2</Dependency>
+            <Dependency releaseFrom="6">libstartup-notification</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-10-02</Date>
+                <Version>1.7.0</Version>
+                <Comment>Packaging update</Comment>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>979308</InstalledSize>
+        <PackageSize>528375</PackageSize>
+        <PackageHash>c1afbdd8f8a5ec9acd0feb9125ada3cae2c3eff2</PackageHash>
+        <PackageURI>rofi-wayland-1.7.0-1-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>rofi-wayland</Name>
+            <Packager>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxdmcp-devel</Name>
+        <Summary xml:lang="en">Development files for libxdmcp</Summary>
+        <Description xml:lang="en">X Display Manager Control Protocol library</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency release="17">libxdmcp</Dependency>
+            <Dependency releaseFrom="6">xorgproto</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <PkgConfig>xdmcp</PkgConfig>
+        </Provides>
+        <History>
+            <Update release="17">
+                <Date>2021-11-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2020-12-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="15">
+                <Date>2019-12-05</Date>
+                <Version>1.1.3</Version>
+                <Comment>Saftey rebuild libxdmcp for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="14">
+                <Date>2019-06-12</Date>
+                <Version>1.1.3</Version>
+                <Comment>Update to 1.1.3</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="13">
+                <Date>2018-10-21</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2018-10-13</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for xorgproto merge</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2017-12-10</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for hygiene
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2017-11-21</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for new toolchain and flags
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2016-10-12</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="8">
+                <Date>2016-04-17</Date>
+                <Version>1.1.2</Version>
+                <Comment>Cleanup, optimize for speed
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>6620</InstalledSize>
+        <PackageSize>3914</PackageSize>
+        <PackageHash>d7099e835d76672e4679bb2c295567b73e1eeed6</PackageHash>
+        <PackageURI>libxdmcp-devel-1.1.3-17-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxdmcp</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxcb-devel</Name>
+        <Summary xml:lang="en">Development files for libxcb</Summary>
+        <Description xml:lang="en">The libxcb package provides an interface to the X Window System protocol, which replaces the current Xlib interface. Xlib can also use XCB as a transport layer, allowing software to make requests and receive responses with both.</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="17">libxdmcp-devel</Dependency>
+            <Dependency releaseFrom="18">libxau-devel</Dependency>
+            <Dependency release="28">libxcb</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <PkgConfig>xcb-xinerama</PkgConfig>
+            <PkgConfig>xcb-record</PkgConfig>
+            <PkgConfig>xcb-xevie</PkgConfig>
+            <PkgConfig>xcb-glx</PkgConfig>
+            <PkgConfig>xcb-res</PkgConfig>
+            <PkgConfig>xcb-screensaver</PkgConfig>
+            <PkgConfig>xcb-xfixes</PkgConfig>
+            <PkgConfig>xcb-composite</PkgConfig>
+            <PkgConfig>xcb-xkb</PkgConfig>
+            <PkgConfig>xcb-dri2</PkgConfig>
+            <PkgConfig>xcb-xf86dri</PkgConfig>
+            <PkgConfig>xcb-present</PkgConfig>
+            <PkgConfig>xcb-shape</PkgConfig>
+            <PkgConfig>xcb-xv</PkgConfig>
+            <PkgConfig>xcb-sync</PkgConfig>
+            <PkgConfig>xcb-xvmc</PkgConfig>
+            <PkgConfig>xcb-randr</PkgConfig>
+            <PkgConfig>xcb-xinput</PkgConfig>
+            <PkgConfig>xcb-dpms</PkgConfig>
+            <PkgConfig>xcb-xprint</PkgConfig>
+            <PkgConfig>xcb-xtest</PkgConfig>
+            <PkgConfig>xcb-render</PkgConfig>
+            <PkgConfig>xcb-damage</PkgConfig>
+            <PkgConfig>xcb-shm</PkgConfig>
+            <PkgConfig>xcb-dri3</PkgConfig>
+            <PkgConfig>xcb</PkgConfig>
+        </Provides>
+        <History>
+            <Update release="28">
+                <Date>2021-11-27</Date>
+                <Version>1.14</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="27">
+                <Date>2020-12-28</Date>
+                <Version>1.14</Version>
+                <Comment>Update libxcb to 1.14
+
+**Changelog:**
+- Add xcb_total_read() and xcb_total_written() API
+- Support check &gt;= 0.13 API (for make check)
+- Bug fix to handle EINTR from recvmsg</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="26">
+                <Date>2020-12-27</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="25">
+                <Date>2020-12-26</Date>
+                <Version>1.13.1</Version>
+                <Comment>drop action.py which is not needed</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="24">
+                <Date>2020-12-25</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild against xcb-proto python3 switch</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="22">
+                <Date>2019-12-05</Date>
+                <Version>1.13.1</Version>
+                <Comment>Saftey rebuild libxcb for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="21">
+                <Date>2018-10-21</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="20">
+                <Date>2018-10-17</Date>
+                <Version>1.13.1</Version>
+                <Comment>Update libxcb to 1.13.1
+
+Summary:
+Don&apos;t flag extra reply in xcb_take_socket
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan: Unit tests are OK
+
+Reviewers: #triage_team, sunnyflunk
+
+Reviewed By: #triage_team, sunnyflunk
+
+Differential Revision: https://dev.getsol.us/D4060</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="19">
+                <Date>2018-10-15</Date>
+                <Version>1.13</Version>
+                <Comment>Rebuild for xorgproto update</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="18">
+                <Date>2018-09-03</Date>
+                <Version>1.13</Version>
+                <Comment>Updated to 1.13</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>2070599</InstalledSize>
+        <PackageSize>171263</PackageSize>
+        <PackageHash>3c6ed56c2b3c5fe6f0483565e646a995dd51acae</PackageHash>
+        <PackageURI>libxcb-devel-1.14-28-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxcb</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>xorgproto</Name>
+        <Summary xml:lang="en">X Window System Core Protocol</Summary>
+        <Description xml:lang="en">This package provides the headers and specification documents defining the core protocol and (many) extensions for the X Window System. The extensions are those common among servers descended from X.Org 6.7. It also includes a number of headers that aren&apos;t purely protocol related, but are depended upon by many other X Window System packages to provide common definitions and porting layer.</Description>
+        <PartOf>xorg.proto</PartOf>
+        <License>MIT</License>
+        <Provides>
+            <PkgConfig>dpmsproto</PkgConfig>
+            <PkgConfig>recordproto</PkgConfig>
+            <PkgConfig>dmxproto</PkgConfig>
+            <PkgConfig>xf86rushproto</PkgConfig>
+            <PkgConfig>xextproto</PkgConfig>
+            <PkgConfig>kbproto</PkgConfig>
+            <PkgConfig>printproto</PkgConfig>
+            <PkgConfig>xf86vidmodeproto</PkgConfig>
+            <PkgConfig>compositeproto</PkgConfig>
+            <PkgConfig>xf86dgaproto</PkgConfig>
+            <PkgConfig>xcalibrateproto</PkgConfig>
+            <PkgConfig>randrproto</PkgConfig>
+            <PkgConfig>xf86driproto</PkgConfig>
+            <PkgConfig>scrnsaverproto</PkgConfig>
+            <PkgConfig>dri3proto</PkgConfig>
+            <PkgConfig>fontcacheproto</PkgConfig>
+            <PkgConfig>xproto</PkgConfig>
+            <PkgConfig>xineramaproto</PkgConfig>
+            <PkgConfig>trapproto</PkgConfig>
+            <PkgConfig>presentproto</PkgConfig>
+            <PkgConfig>xcmiscproto</PkgConfig>
+            <PkgConfig>inputproto</PkgConfig>
+            <PkgConfig>renderproto</PkgConfig>
+            <PkgConfig>videoproto</PkgConfig>
+            <PkgConfig>bigreqsproto</PkgConfig>
+            <PkgConfig>xf86bigfontproto</PkgConfig>
+            <PkgConfig>damageproto</PkgConfig>
+            <PkgConfig>fixesproto</PkgConfig>
+            <PkgConfig>dri2proto</PkgConfig>
+            <PkgConfig>evieproto</PkgConfig>
+            <PkgConfig>glproto</PkgConfig>
+            <PkgConfig>fontsproto</PkgConfig>
+            <PkgConfig>xf86miscproto</PkgConfig>
+            <PkgConfig>lg3dproto</PkgConfig>
+            <PkgConfig>xproxymngproto</PkgConfig>
+            <PkgConfig>resourceproto</PkgConfig>
+        </Provides>
+        <History>
+            <Update release="6">
+                <Date>2021-11-27</Date>
+                <Version>2021.5</Version>
+                <Comment>Update to 2021.5
+
+**Changelog**
+- Introduces V2.4 of the X Input Protocol that understands the concept of touchpad gestures.</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2021-07-07</Date>
+                <Version>2021.4</Version>
+                <Comment>Update to 2021.4</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2020-12-27</Date>
+                <Version>2020.1</Version>
+                <Comment>Update xorgproto to 2020.1
+
+Changelog available [here](https://www.mail-archive.com/xorg@lists.x.org/msg06298.html)</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="3">
+                <Date>2019-12-05</Date>
+                <Version>2019.2</Version>
+                <Comment>Update xorgproto to 2019.2
+
+Summary:
+Update xorgproto to 2019.2
+
+**Changelog:**
+
+- [2019.2](https://www.mail-archive.com/xorg@lists.x.org/msg06079.html)
+- [2019.1](https://www.mail-archive.com/xorg-announce@lists.x.org/msg01211.html)
+
+Test Plan: the system runs still fine and every rev dependency got build without any issues
+
+Reviewers: #triage_team, JoshStrobl
+
+Reviewed By: #triage_team, JoshStrobl
+
+Subscribers: JoshStrobl
+
+Tags: #requires_rebuilds
+
+Differential Revision: https://dev.getsol.us/D7780</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="2">
+                <Date>2019-06-03</Date>
+                <Version>2018.4</Version>
+                <Comment>Enable legacy protos for compatibility</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2018-10-13</Date>
+                <Version>2018.4</Version>
+                <Comment>Initial commit of xorgproto to replace individual packages
+
+Signed-off-by: Peter O&apos;Connor &lt;peter@solus-project.com&gt;</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1288205</InstalledSize>
+        <PackageSize>208338</PackageSize>
+        <PackageHash>40e73a8cf90650de60b85e520d3bf44a9052f2aa</PackageHash>
+        <PackageURI>xorgproto-2021.5-6-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>xorgproto</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxdmcp-32bit</Name>
+        <Summary xml:lang="en">32-bit libraries for libxdmcp</Summary>
+        <Description xml:lang="en">X Display Manager Control Protocol library</Description>
+        <PartOf>emul32</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency release="17">libxdmcp</Dependency>
+            <Dependency releaseFrom="68">glibc-32bit</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="17">
+                <Date>2021-11-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2020-12-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="15">
+                <Date>2019-12-05</Date>
+                <Version>1.1.3</Version>
+                <Comment>Saftey rebuild libxdmcp for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="14">
+                <Date>2019-06-12</Date>
+                <Version>1.1.3</Version>
+                <Comment>Update to 1.1.3</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="13">
+                <Date>2018-10-21</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2018-10-13</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for xorgproto merge</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2017-12-10</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for hygiene
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2017-11-21</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild for new toolchain and flags
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2016-10-12</Date>
+                <Version>1.1.2</Version>
+                <Comment>Rebuild
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="8">
+                <Date>2016-04-17</Date>
+                <Version>1.1.2</Version>
+                <Comment>Cleanup, optimize for speed
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>25893</InstalledSize>
+        <PackageSize>10824</PackageSize>
+        <PackageHash>8de38e8670f8458f58429dfc1ae0e758d62ff242</PackageHash>
+        <PackageURI>libxdmcp-32bit-1.1.3-17-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxdmcp</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>slurp</Name>
+        <Summary xml:lang="en">select a region in a wayland compositor</Summary>
+        <Description xml:lang="en">select a region in a waylan compositor</Description>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="24">wayland</Dependency>
+            <Dependency releaseFrom="68">glibc</Dependency>
+            <Dependency releaseFrom="12">libxkbcommon</Dependency>
+            <Dependency releaseFrom="48">libcairo</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-11-26</Date>
+                <Version>1.3.2</Version>
+                <Comment>Packaging update</Comment>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>35216</InstalledSize>
+        <PackageSize>11950</PackageSize>
+        <PackageHash>ca31ce4c23c04bdd799c9541645b625d41ef979e</PackageHash>
+        <PackageURI>slurp-1.3.2-1-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>slurp</Name>
+            <Packager>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>nnn-nerd</Name>
+        <Summary xml:lang="en">A simple console file manager forked from Noice.</Summary>
+        <Description xml:lang="en">A simple console file manager forked from Noice.</Description>
+        <PartOf>system.utils</PartOf>
+        <License>BSD-2-Clause</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="15">ncurses</Dependency>
+            <Dependency releaseFrom="68">glibc</Dependency>
+            <Dependency releaseFrom="8">readline</Dependency>
+            <Dependency>atool</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>mediainfo</Dependency>
+            <Dependency>moreutils</Dependency>
+            <Dependency>rclone</Dependency>
+            <Dependency>sshfs-fuse</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="24">
+                <Date>2021-11-28</Date>
+                <Version>4.4</Version>
+                <Comment>Packaging update</Comment>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>143476</InstalledSize>
+        <PackageSize>63350</PackageSize>
+        <PackageHash>541f7dd11582de40969b4ff75955704f9b3931a0</PackageHash>
+        <PackageURI>nnn-nerd-4.4-24-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>nnn-nerd</Name>
+            <Packager>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxcb</Name>
+        <Summary xml:lang="en">X C Binding</Summary>
+        <Description xml:lang="en">The libxcb package provides an interface to the X Window System protocol, which replaces the current Xlib interface. Xlib can also use XCB as a transport layer, allowing software to make requests and receive responses with both.</Description>
+        <PartOf>xorg.library</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="68">glibc</Dependency>
+            <Dependency releaseFrom="17">libxdmcp</Dependency>
+            <Dependency releaseFrom="18">libxau</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="28">
+                <Date>2021-11-27</Date>
+                <Version>1.14</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="27">
+                <Date>2020-12-28</Date>
+                <Version>1.14</Version>
+                <Comment>Update libxcb to 1.14
+
+**Changelog:**
+- Add xcb_total_read() and xcb_total_written() API
+- Support check &gt;= 0.13 API (for make check)
+- Bug fix to handle EINTR from recvmsg</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="26">
+                <Date>2020-12-27</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="25">
+                <Date>2020-12-26</Date>
+                <Version>1.13.1</Version>
+                <Comment>drop action.py which is not needed</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="24">
+                <Date>2020-12-25</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild against xcb-proto python3 switch</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="22">
+                <Date>2019-12-05</Date>
+                <Version>1.13.1</Version>
+                <Comment>Saftey rebuild libxcb for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="21">
+                <Date>2018-10-21</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="20">
+                <Date>2018-10-17</Date>
+                <Version>1.13.1</Version>
+                <Comment>Update libxcb to 1.13.1
+
+Summary:
+Don&apos;t flag extra reply in xcb_take_socket
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan: Unit tests are OK
+
+Reviewers: #triage_team, sunnyflunk
+
+Reviewed By: #triage_team, sunnyflunk
+
+Differential Revision: https://dev.getsol.us/D4060</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="19">
+                <Date>2018-10-15</Date>
+                <Version>1.13</Version>
+                <Comment>Rebuild for xorgproto update</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="18">
+                <Date>2018-09-03</Date>
+                <Version>1.13</Version>
+                <Comment>Updated to 1.13</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>2717237</InstalledSize>
+        <PackageSize>419758</PackageSize>
+        <PackageHash>fb0fae4257c8267555fe20174ce02668a8a53f82</PackageHash>
+        <PackageURI>libxcb-1.14-28-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxcb</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxau-32bit-devel</Name>
+        <Summary xml:lang="en">Development files for 32-bit libxau</Summary>
+        <Description xml:lang="en">The libXau package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display.</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency release="18">libxau-devel</Dependency>
+            <Dependency releaseFrom="6">xorgproto</Dependency>
+            <Dependency release="18">libxau-32bit</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <PkgConfig32>xau</PkgConfig32>
+        </Provides>
+        <History>
+            <Update release="18">
+                <Date>2021-11-27</Date>
+                <Version>1.0.9</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="17">
+                <Date>2021-06-20</Date>
+                <Version>1.0.9</Version>
+                <Comment>Rebuild against toolchain</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2020-12-27</Date>
+                <Version>1.0.9</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="15">
+                <Date>2019-12-05</Date>
+                <Version>1.0.9</Version>
+                <Comment>Saftey rebuild libxau for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="14">
+                <Date>2019-02-16</Date>
+                <Version>1.0.9</Version>
+                <Comment>Update libxau to 1.0.9
+
+Summary:
+Changelog available [here](https://gitlab.freedesktop.org/xorg/lib/libxau/compare/libXau-1.0.8...libXau-1.0.9)
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan:
+- Unit tests enabled
+- Install and reboot -&gt; ok
+
+Reviewers: #triage_team, DataDrake
+
+Reviewed By: #triage_team, DataDrake
+
+Subscribers: DataDrake
+
+Differential Revision: https://dev.getsol.us/D5350</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="13">
+                <Date>2018-10-21</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2018-10-13</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for xorgproto merge</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2017-12-10</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for hygiene
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2017-11-21</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for new toolchain and flags
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2016-12-16</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for toolchain
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>239</InstalledSize>
+        <PackageSize>2079</PackageSize>
+        <PackageHash>59f912a8e16d23261e1f3d1b9f2f666fbc1b8d51</PackageHash>
+        <PackageURI>libxau-32bit-devel-1.0.9-18-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxau</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxau-devel</Name>
+        <Summary xml:lang="en">Development files for libxau</Summary>
+        <Description xml:lang="en">The libXau package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display.</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="6">xorgproto</Dependency>
+            <Dependency release="18">libxau</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <PkgConfig>xau</PkgConfig>
+        </Provides>
+        <History>
+            <Update release="18">
+                <Date>2021-11-27</Date>
+                <Version>1.0.9</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="17">
+                <Date>2021-06-20</Date>
+                <Version>1.0.9</Version>
+                <Comment>Rebuild against toolchain</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2020-12-27</Date>
+                <Version>1.0.9</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="15">
+                <Date>2019-12-05</Date>
+                <Version>1.0.9</Version>
+                <Comment>Saftey rebuild libxau for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="14">
+                <Date>2019-02-16</Date>
+                <Version>1.0.9</Version>
+                <Comment>Update libxau to 1.0.9
+
+Summary:
+Changelog available [here](https://gitlab.freedesktop.org/xorg/lib/libxau/compare/libXau-1.0.8...libXau-1.0.9)
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan:
+- Unit tests enabled
+- Install and reboot -&gt; ok
+
+Reviewers: #triage_team, DataDrake
+
+Reviewed By: #triage_team, DataDrake
+
+Subscribers: DataDrake
+
+Differential Revision: https://dev.getsol.us/D5350</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="13">
+                <Date>2018-10-21</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2018-10-13</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for xorgproto merge</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2017-12-10</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for hygiene
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2017-11-21</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for new toolchain and flags
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2016-12-16</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for toolchain
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>4056</InstalledSize>
+        <PackageSize>3656</PackageSize>
+        <PackageHash>154af67b305d2a1f2af2c190a241837060aaefee</PackageHash>
+        <PackageURI>libxau-devel-1.0.9-18-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxau</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxcb-32bit</Name>
+        <Summary xml:lang="en">32-bit libraries for libxcb</Summary>
+        <Description xml:lang="en">The libxcb package provides an interface to the X Window System protocol, which replaces the current Xlib interface. Xlib can also use XCB as a transport layer, allowing software to make requests and receive responses with both.</Description>
+        <PartOf>emul32</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency release="28">libxcb</Dependency>
+            <Dependency releaseFrom="18">libxau-32bit</Dependency>
+            <Dependency releaseFrom="17">libxdmcp-32bit</Dependency>
+            <Dependency releaseFrom="68">glibc-32bit</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="28">
+                <Date>2021-11-27</Date>
+                <Version>1.14</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="27">
+                <Date>2020-12-28</Date>
+                <Version>1.14</Version>
+                <Comment>Update libxcb to 1.14
+
+**Changelog:**
+- Add xcb_total_read() and xcb_total_written() API
+- Support check &gt;= 0.13 API (for make check)
+- Bug fix to handle EINTR from recvmsg</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="26">
+                <Date>2020-12-27</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="25">
+                <Date>2020-12-26</Date>
+                <Version>1.13.1</Version>
+                <Comment>drop action.py which is not needed</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="24">
+                <Date>2020-12-25</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild against xcb-proto python3 switch</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="22">
+                <Date>2019-12-05</Date>
+                <Version>1.13.1</Version>
+                <Comment>Saftey rebuild libxcb for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="21">
+                <Date>2018-10-21</Date>
+                <Version>1.13.1</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="20">
+                <Date>2018-10-17</Date>
+                <Version>1.13.1</Version>
+                <Comment>Update libxcb to 1.13.1
+
+Summary:
+Don&apos;t flag extra reply in xcb_take_socket
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan: Unit tests are OK
+
+Reviewers: #triage_team, sunnyflunk
+
+Reviewed By: #triage_team, sunnyflunk
+
+Differential Revision: https://dev.getsol.us/D4060</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="19">
+                <Date>2018-10-15</Date>
+                <Version>1.13</Version>
+                <Comment>Rebuild for xorgproto update</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="18">
+                <Date>2018-09-03</Date>
+                <Version>1.13</Version>
+                <Comment>Updated to 1.13</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1170523</InstalledSize>
+        <PackageSize>213323</PackageSize>
+        <PackageHash>858c1fdf19a98ac419111ef744bdb8d474a2f1c3</PackageHash>
+        <PackageURI>libxcb-32bit-1.14-28-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxcb</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>grim</Name>
+        <Summary xml:lang="en">Grab images from a wayland compositor</Summary>
+        <Description xml:lang="en">Grab images from a wayland compositor</Description>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="24">wayland</Dependency>
+            <Dependency releaseFrom="68">glibc</Dependency>
+            <Dependency releaseFrom="16">libjpeg-turbo</Dependency>
+            <Dependency releaseFrom="48">libcairo</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-11-26</Date>
+                <Version>1.3.2</Version>
+                <Comment>Packaging update</Comment>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>35032</InstalledSize>
+        <PackageSize>11333</PackageSize>
+        <PackageHash>fa990e6e2f9dea4ca6c96d0165fb5559a4543e78</PackageHash>
+        <PackageURI>grim-1.3.2-1-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>grim</Name>
+            <Packager>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wofi</Name>
+        <Summary xml:lang="en">Application launcher for wlroots based wayland compositors</Summary>
+        <Description xml:lang="en">Application launcher for wlroots based wayland compositors</Description>
+        <PartOf>desktop.wayland</PartOf>
+        <License>GPL-3.0</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="43">gdk-pixbuf</Dependency>
+            <Dependency releaseFrom="104">libgtk-3</Dependency>
+            <Dependency releaseFrom="24">wayland</Dependency>
+            <Dependency releaseFrom="48">libcairo</Dependency>
+            <Dependency releaseFrom="67">glibc</Dependency>
+            <Dependency releaseFrom="77">glib2</Dependency>
+            <Dependency releaseFrom="44">pango</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-09-01</Date>
+                <Version>1.2.4</Version>
+                <Comment>Packaging update</Comment>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>177355</InstalledSize>
+        <PackageSize>52278</PackageSize>
+        <PackageHash>0f06aa9e9b4c412f7a44f4f121e1a7438fc0bfc5</PackageHash>
+        <PackageURI>wofi-1.2.4-1-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wofi</Name>
+            <Packager>
+                <Name>Matt Kastelic</Name>
+                <Email>edenfall_matt@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>libxau</Name>
+        <Summary xml:lang="en">X Authorization Protocol library</Summary>
+        <Description xml:lang="en">The libXau package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display.</Description>
+        <PartOf>xorg.library</PartOf>
+        <License>MIT</License>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="68">glibc</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="18">
+                <Date>2021-11-27</Date>
+                <Version>1.0.9</Version>
+                <Comment>Safety rebuild</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="17">
+                <Date>2021-06-20</Date>
+                <Version>1.0.9</Version>
+                <Comment>Rebuild against toolchain</Comment>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2020-12-27</Date>
+                <Version>1.0.9</Version>
+                <Comment>Rebuild against xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="15">
+                <Date>2019-12-05</Date>
+                <Version>1.0.9</Version>
+                <Comment>Saftey rebuild libxau for xorgproto</Comment>
+                <Name>F. von Gellhorn</Name>
+                <Email>flinux@vongellhorn.ch</Email>
+            </Update>
+            <Update release="14">
+                <Date>2019-02-16</Date>
+                <Version>1.0.9</Version>
+                <Comment>Update libxau to 1.0.9
+
+Summary:
+Changelog available [here](https://gitlab.freedesktop.org/xorg/lib/libxau/compare/libXau-1.0.8...libXau-1.0.9)
+
+Signed-off-by: Pierre-Yves &lt;pyu@riseup.net&gt;
+
+Test Plan:
+- Unit tests enabled
+- Install and reboot -&gt; ok
+
+Reviewers: #triage_team, DataDrake
+
+Reviewed By: #triage_team, DataDrake
+
+Subscribers: DataDrake
+
+Differential Revision: https://dev.getsol.us/D5350</Comment>
+                <Name>Pierre-Yves</Name>
+                <Email>pyu@riseup.net</Email>
+            </Update>
+            <Update release="13">
+                <Date>2018-10-21</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for xorgproto</Comment>
+                <Name>Bryan T. Meyers</Name>
+                <Email>bmeyers@datadrake.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2018-10-13</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for xorgproto merge</Comment>
+                <Name>Peter O&apos;Connor</Name>
+                <Email>peter@solus-project.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2017-12-10</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for hygiene
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2017-11-21</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for new toolchain and flags
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2016-12-16</Date>
+                <Version>1.0.8</Version>
+                <Comment>Rebuild for toolchain
+
+Signed-off-by: Ikey Doherty &lt;ikey@solus-project.com&gt;</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solus-project.com</Email>
+            </Update>
+        </History>
+        <BuildHost>solus</BuildHost>
+        <Distribution>Solus</Distribution>
+        <DistributionRelease>1</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>19613</InstalledSize>
+        <PackageSize>8382</PackageSize>
+        <PackageHash>086930207203ed52a30f9e04305b8472ef11a059</PackageHash>
+        <PackageURI>libxau-1.0.9-18-1-x86_64.eopkg</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>libxau</Name>
+            <Packager>
+                <Name>Joey Riches</Name>
+                <Email>josephriches@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+</PISI>
